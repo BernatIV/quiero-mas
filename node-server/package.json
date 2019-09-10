@@ -1,0 +1,23 @@
+{
+  "name": "com.quiero-mas",
+  "version": "1.0.0",
+  "description": "Quiero Más is a cool app for clients of a bar in Barcelona, Raval.",
+  "main": "server.js",
+  "scripts": {
+    "test": "qmas",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BernatIV/quiero-mas.git"
+  },
+  "keywords": [
+    "bar"
+  ],
+  "author": "Marc Mañé",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BernatIV/quiero-mas/issues"
+  },
+  "homepage": "https://github.com/BernatIV/quiero-mas#readme"
+}
