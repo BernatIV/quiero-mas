@@ -1,5 +1,5 @@
-// server.js
-
+// server NODE
+/*
 var http = require('http');
 
 var server = http.createServer(function(req, res) {
@@ -10,6 +10,24 @@ var server = http.createServer(function(req, res) {
 server.listen(3000, function() {
     console.log('Server is running at 3000')
 });
+*/
 
-// Tutorial
-// https://appdividend.com/2018/03/16/how-to-build-node-js-web-server/
+// server EXPRESS
+
+var express = require('express');
+
+var app = express();
+
+var PORT = 3000;
+
+app.get('/', function(req, res) {
+	res.status(200).send('Bar Johan');
+});
+
+app.listen(PORT, function() {
+	console.log('Server is running on PORT:',PORT);
+})
+
+// Tutorials
+
+// FET https://appdividend.com/2018/03/16/how-to-build-node-js-web-server/
