@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/BernatIV/quiero-mas/issues"
   },
-  "homepage": "https://github.com/BernatIV/quiero-mas#readme"
+  "homepage": "https://github.com/BernatIV/quiero-mas#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
