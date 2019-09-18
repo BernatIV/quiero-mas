@@ -21,8 +21,13 @@ var app = express();
 var PORT = 3000;
 
 app.get('/', function(req, res) {
-	res.status(200).send('Bar Johan');
+	res.status(200).send('Bar Yohan');
 });
+
+app.get('/login', function(req, res) {
+	res.status(400).send('loguejat');
+});
+
 
 app.listen(PORT, function() {
 	console.log('Server is running on PORT:',PORT);
@@ -31,3 +36,4 @@ app.listen(PORT, function() {
 // Tutorials
 
 // FET https://appdividend.com/2018/03/16/how-to-build-node-js-web-server/
+// https://facebook.github.io/react-native/docs/network
