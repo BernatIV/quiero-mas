@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.quiero-mas-server</groupId>
 	<artifactId>quiero-mas-server</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.5-SNAPSHOT</version>
 	<name>quiero-mas-server</name>
 	<description>Demo project for Spring Boot</description>
 
