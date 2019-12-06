@@ -1,6 +1,6 @@
 package com.quieromasserver.quieromasserver.business;
 
-import com.quieromasserver.quieromasserver.entity.User;
+import com.quieromasserver.quieromasserver.model.User;
 import com.quieromasserver.quieromasserver.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

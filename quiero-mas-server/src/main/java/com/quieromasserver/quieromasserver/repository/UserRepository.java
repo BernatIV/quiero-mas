@@ -1,6 +1,6 @@
 package com.quieromasserver.quieromasserver.repository;
 
-import com.quieromasserver.quieromasserver.entity.User;
+import com.quieromasserver.quieromasserver.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 

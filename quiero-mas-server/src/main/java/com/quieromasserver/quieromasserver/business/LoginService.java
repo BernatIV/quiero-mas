@@ -1,6 +1,6 @@
 package com.quieromasserver.quieromasserver.business;
 
-import com.quieromasserver.quieromasserver.entity.User;
+import com.quieromasserver.quieromasserver.model.User;
 import com.quieromasserver.quieromasserver.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -53,11 +53,11 @@ public class LoginService {
     public User discountUserBalance(long userId) {
 
         // Check if user exists
-        Optional<User> userRetrieved = getUserRepository().findById(userId);
+        Optional<User> user = getUserRepository().findById(userId);
 
         // fer update de user
 
-        return userRetrieved.orElse(null);
+        return user.orElse(null);
 
     }
 

@@ -3,7 +3,7 @@ package com.quieromasserver.quieromasserver.controller;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.quieromasserver.quieromasserver.business.LoginService;
 import com.quieromasserver.quieromasserver.business.UserService;
-import com.quieromasserver.quieromasserver.entity.User;
+import com.quieromasserver.quieromasserver.model.User;
 import com.quieromasserver.quieromasserver.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
