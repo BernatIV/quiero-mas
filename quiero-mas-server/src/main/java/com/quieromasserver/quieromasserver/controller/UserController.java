@@ -3,6 +3,7 @@ package com.quieromasserver.quieromasserver.controller;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.quieromasserver.quieromasserver.business.LoginService;
 import com.quieromasserver.quieromasserver.business.UserService;
+import com.quieromasserver.quieromasserver.model.BalanceTransactions;
 import com.quieromasserver.quieromasserver.model.User;
 import com.quieromasserver.quieromasserver.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,13 @@ public class UserController {
         return getLoginService().getLogin(user);
     }
 
+    @RequestMapping(value = "/getUserScanned/", method = RequestMethod.POST, headers = {"Accept=application/json"}, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public User getUserScanned(@RequestBody ObjectNode json) {
+
+        return getLoginService().getUserScanned(json.get("userQrCode").asText());
+    }
+
     /**
      *
      * @param user object that we are creating
@@ -48,9 +56,9 @@ public class UserController {
 
     @RequestMapping(value = "/discountUserBalance/", method = RequestMethod.POST, headers = {"Accept=application/json"}, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public User discountUserBalance(@RequestBody ObjectNode json) {
+    public User discountUserBalance(@RequestBody BalanceTransactions balanceTransactions) {
 
-        return getLoginService().discountUserBalance(json.get("userId").asInt());
+        return getLoginService().discountUserBalance(balanceTransactions);
     }
 
 

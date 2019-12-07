@@ -1,13 +1,11 @@
 package com.quieromasserver.quieromasserver.repository;
 
+import com.quieromasserver.quieromasserver.model.BalanceTransactions;
 import com.quieromasserver.quieromasserver.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 
 @Component
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface BalanceTransactionsRepository extends JpaRepository<BalanceTransactions, Long> {
 
-    User findByUsername(String username);
-
-    User findByUserQrCode(String userQrCode);
 }

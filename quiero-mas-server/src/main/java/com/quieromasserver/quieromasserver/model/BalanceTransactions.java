@@ -11,7 +11,7 @@ public class BalanceTransactions {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID")
-    private long id;
+    private Long id;
 
     @Column(name = "TRANSACTION_AMOUNT")
     private double transactionAmount;

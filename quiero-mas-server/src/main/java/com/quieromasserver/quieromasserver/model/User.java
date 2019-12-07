@@ -3,7 +3,7 @@ package com.quieromasserver.quieromasserver.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="LOGIN", schema="quiero_mas")
+@Table(name="USER_LOGIN", schema="quiero_mas")
 public class User {
 
     @Id
@@ -16,6 +16,9 @@ public class User {
 
     @Column(name = "PASSWORD")
     private String password;
+
+    @Column(name = "USER_QR_CODE", unique = true)
+    private String userQrCode;
 
     @Column(name = "CURRENT_BALANCE")
     private Double currentBalance;
@@ -55,6 +58,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getUserQrCode() {
+        return userQrCode;
+    }
+
+    public void setUserQrCode(String userQrCode) {
+        this.userQrCode = userQrCode;
     }
 
     public Double getCurrentBalance() {
