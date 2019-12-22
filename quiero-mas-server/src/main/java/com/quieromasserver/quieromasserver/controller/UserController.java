@@ -24,7 +24,7 @@ public class UserController {
     private LoginService loginService;
 
     /**
-     * Retrieves the user if password and name are write.
+     * Retrieves the user if password and username are wright.
      * @param user
      * @return
      */
@@ -35,15 +35,8 @@ public class UserController {
         return getLoginService().getLogin(user);
     }
 
-    @RequestMapping(value = "/getUserScanned/", method = RequestMethod.POST, headers = {"Accept=application/json"}, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseBody
-    public User getUserScanned(@RequestBody ObjectNode json) {
-
-        return getLoginService().getUserScanned(json.get("userQrCode").asText());
-    }
-
     /**
-     *
+     * Creates a user when user signs up
      * @param user object that we are creating
      * @return
      */
@@ -54,6 +47,24 @@ public class UserController {
         return getLoginService().createUser(user);
     }
 
+    /**
+     * When waiter scans QR code of a user, he calls this method to retieve its information
+     * @param json
+     * @return
+     */
+    @RequestMapping(value = "/getUserScanned/", method = RequestMethod.POST, headers = {"Accept=application/json"}, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public User getUserScanned(@RequestBody ObjectNode json) {
+
+        return getLoginService().getUserScanned(json.get("userQrCode").asText());
+    }
+
+
+    /**
+     * Waiter calls this method after scanning QR code of a user. It discount an amount from its balance.
+     * @param balanceTransactions
+     * @return
+     */
     @RequestMapping(value = "/discountUserBalance/", method = RequestMethod.POST, headers = {"Accept=application/json"}, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public User discountUserBalance(@RequestBody BalanceTransactions balanceTransactions) {

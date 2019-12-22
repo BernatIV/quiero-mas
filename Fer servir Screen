@@ -1,11 +1,8 @@
 Comandes a mà: 
 
-* a dins de quiero-mas perquè trobi la key pair
+
+cd quiero-mas/
 ssh -i "BernatsKeyPair.pem" ubuntu@ec2-35-180-152-11.eu-west-3.compute.amazonaws.com
-
-
-
-ssh me@myserver.com
 screen               #start a screen session
 
 # run a long proccess
@@ -15,5 +12,5 @@ CTRL+a , d to detatch from your screen session
 exit
 
 # When you come back
-ssh me@myserver.com
+ssh -i "BernatsKeyPair.pem" ubuntu@ec2-35-180-152-11.eu-west-3.compute.amazonaws.com
 screen -r            #resume the screen session

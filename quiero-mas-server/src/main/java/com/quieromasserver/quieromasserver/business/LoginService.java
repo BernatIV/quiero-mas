@@ -76,6 +76,8 @@ public class LoginService {
 
         getUserRepository().save(user);
 
+        // Remove password before sending
+        user.setPassword(null);
         return user;
     }
 
